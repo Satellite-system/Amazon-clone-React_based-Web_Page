@@ -14,14 +14,14 @@ function Home() {
 
         <div className="home__row">
           <Product
-            id= '19030293'
+            id="19030293"
             title="Rich Dad Poor Dad"
             imag="https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UL480_FMwebp_QL65_.jpg"
             price={302}
             rating={3}
           />
           <Product
-            id= '190136293'
+            id="190136293"
             title="Zuvexa Egg Boiler Poacher Automatic Off Steaming, Cooking, Boiling Double Layer 14 Egg Boiler (Multicolor)"
             imag="https://m.media-amazon.com/images/I/41OMk5gCq1L.jpg"
             price={499}
@@ -30,22 +30,22 @@ function Home() {
         </div>
 
         <div className="home__row">
-        <Product
-            id= '196930293'
+          <Product
+            id="196930293"
             title="HP All-in-One 24-df0215in 60.45 cm (23.8-Inch) FHD with Alexa Built-in"
             imag="https://m.media-amazon.com/images/I/71MW1E0je-L._AC_UL480_FMwebp_QL65_.jpg"
             price={49900}
             rating={4}
           />
-        <Product
-            id= '190357293'
+          <Product
+            id="190357293"
             title="OFIXO Multi-Purpose Laptop Table/Study Table/Bed Table/Foldable and Portable Wooden/Writing Desk (Wooden)"
             imag="https://images-eu.ssl-images-amazon.com/images/I/61Li8vJ+7iL._AC_UL450_SR450,320_.jpg"
             price={599}
             rating={4}
           />
-        <Product
-            id= '190331463'
+          <Product
+            id="190331463"
             title="Lavie Sport Cabin Size 53 cms Lino Wheel Duffel Bag for Travel | Luggage Bag | Travel Bag"
             imag="https://images-eu.ssl-images-amazon.com/images/I/61QSsY2TYJL._AC_UL450_SR450,320_.jpg"
             price={949}
@@ -55,11 +55,12 @@ function Home() {
 
         <div className="home__row">
           <Product
-          id='3562943'
-          title='LG 80 cms (32 Inches) HD Ready Smart IPS LED TV 32LM560BPTC'
-          imag='https://m.media-amazon.com/images/I/81Yy5UF05tL._SL1500_.jpg'
-          price={22499}
-          rating={5} />
+            id="3562943"
+            title="LG 80 cms (32 Inches) HD Ready Smart IPS LED TV 32LM560BPTC"
+            imag="https://m.media-amazon.com/images/I/81Yy5UF05tL._SL1500_.jpg"
+            price={22499}
+            rating={5}
+          />
         </div>
       </div>
     </div>

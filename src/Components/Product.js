@@ -3,7 +3,6 @@ import StarIcon from "@mui/icons-material/Star";
 import "./Styles/Product.css";
 
 function Product({ title, imag, price, rating }) {
-
   return (
     <div className="product">
       <div className="product__info">
@@ -20,7 +19,6 @@ function Product({ title, imag, price, rating }) {
                 <StarIcon sx={{ color: "#F49620" }} />
               </p>
             ))}
-          
         </div>
       </div>
       <img src={imag} alt="" />
