@@ -1,8 +1,25 @@
 import React from "react";
 import StarIcon from "@mui/icons-material/Star";
 import "./Styles/Product.css";
+import { useStateValue } from "../Redux/Stateprovider";
 
-function Product({ title, imag, price, rating }) {
+function Product({id, title, imag, price, rating }) {
+  const [state, dispatch] = useStateValue();
+
+  const addToBasket = ()=>{
+    //Dispatch the item into the data layer
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      item: {
+        id: id,
+        title: title,
+        image: imag,
+        price: price,
+        rating: rating
+      }
+    });
+  }
+
   return (
     <div className="product">
       <div className="product__info">
@@ -23,7 +40,7 @@ function Product({ title, imag, price, rating }) {
       </div>
       <img src={imag} alt="" />
 
-      <button>Add to Cart</button>
+      <button onClick={addToBasket} >Add to Cart</button>
     </div>
   );
 }

@@ -5,8 +5,10 @@ import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import {
    Link
  } from "react-router-dom";
+import { useStateValue } from '../Redux/Stateprovider';
 
 function Header() {
+   const [{basket},dispatch] = useStateValue();
   return (
     <div className='header'>
        <Link to='/'>
@@ -34,7 +36,7 @@ function Header() {
           <Link to='checkout'>
           <div className="header__optionBasket">
              <ShoppingCartCheckoutIcon fontSize='large' />
-             <span className="option_lineTwo header__basketCount">0</span>
+             <span className="option_lineTwo header__basketCount">{basket?.length}</span>
           </div>
           </Link>
        </div>
