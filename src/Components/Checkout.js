@@ -30,12 +30,6 @@ function Checkout() {
             />
           ))}
 
-          {/* <BasketItem /> */}
-          {/* <BasketItem /> */}
-          {/* <BasketItem /> */}
-          {/* <BasketItem /> */}
-          {/* <BasketItem /> */}
-          {/* <BasketItem /> */}
         </div>
       </div>
 

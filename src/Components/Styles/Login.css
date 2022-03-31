@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.logoImg{
+   height: 40px;
+   display: block;
+   margin: 20px auto;
+}
+
+.signInBox{
+   margin: 30px auto;
+   width: 25%;
+   background-color: white;
+   border: 2px solid #E6E6E6;
+   padding-left: 25px;
+}
+.signInBox > h1{
+   font-family: 'Roboto', sans-serif;
+   /* font-family: 'IBM Plex Sans Arabic', sans-serif; */
+   margin: 12px 0px;
+}
+#numBox {
+   display: block;
+   width: 86%;
+   margin-top: 5px;
+   padding: 5px;
+   margin-bottom: 10px;
+}
+.login__input:focus {
+   outline-color: #e77600;
+   border-color: #e77600;
+   box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+}
+
+.signInBox  button {
+   width: 90%;
+   height: 30px;
+   background: linear-gradient(#F9E7BB, #EFBC3E);
+   border: 1px solid rgb(228 121 17 / 50%);
+   color: black;
+   margin: 10px 0px;
+   margin-top: 5px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 600;
+   border-radius: 3px;
+}
+.signInBox  button:hover{
+   background:  #EFBC3E;
+   cursor: pointer;
+}
+
+.signInBox p{
+   font-size: 12px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 600;
+   margin-bottom: 20px;
+}
+.login__bottom {
+   display: block;
+   width: 100%;
+   margin: 12px auto;
+   text-align: center;
+}
+.login__newAccount{
+   display: flex;
+   justify-content: center;
+   width: 25%;
+   margin: 2px auto;
+}
