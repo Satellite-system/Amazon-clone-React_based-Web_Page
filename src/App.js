@@ -8,8 +8,34 @@ import {
 } from "react-router-dom";
 import Checkout from './Components/Checkout';
 import Login from './Components/Login';
+import {auth} from './firebase';
+import { useEffect } from 'react';
+import { useStateValue } from './Redux/Stateprovider';
 
 function App() {
+  const [{},dispatch] = useStateValue();
+
+  useEffect(() => {
+
+    auth.onAuthStateChanged(authUser =>{
+      console.log('USer Logged is >>>', authUser );
+      
+      if(authUser){ // User Exists
+        dispatch({
+          type: 'SET_USER',
+          user: authUser
+        })
+      }else{ // none User Exists
+        dispatch({
+          type: 'SET_USER',
+          user: null
+        })
+      }
+
+    })
+  },[])
+  
+
   return (
     <BrowserRouter>
     <div className="app">

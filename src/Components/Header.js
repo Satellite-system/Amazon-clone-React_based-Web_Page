@@ -3,12 +3,24 @@ import './Styles/Header.css'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import {
-   Link
+   Link, useNavigate
  } from "react-router-dom";
 import { useStateValue } from '../Redux/Stateprovider';
+import { auth } from '../firebase';
 
 function Header() {
-   const [{basket},dispatch] = useStateValue();
+   const [{basket,user},dispatch] = useStateValue();
+   const navigate = useNavigate();
+
+   const handleAuth = ()=>{
+      if(user){
+         alert('Do you Want to Sign Out??');
+         auth.signOut();
+      }else{
+         navigate('/login');
+      }
+   }
+
   return (
     <div className='header'>
        <Link to='/' style={{textDecoration: 'none'}}>
@@ -21,13 +33,11 @@ function Header() {
        </div>
 
        <div className="header__nav">
-       <Link to='/login'  style={{textDecoration: 'none',color:'white'}}>
-          <div className="header__options">
-             <span className="option_lineOne">Hello Guest</span>
+          <div className="header__options" onClick={handleAuth} >
+             <span className="option_lineOne">Hello {user?'':'Guest'}</span>
              
-             <span className="option_lineTwo">Sign In</span>
+             <span className="option_lineTwo">{user?user.email:'Sign In'}</span>
           </div>
-             </Link>
           <div className="header__options">
              <span className="option_lineOne">Returns</span>
              <span className="option_lineTwo">& Orders</span>
