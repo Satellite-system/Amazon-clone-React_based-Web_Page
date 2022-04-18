@@ -52,41 +52,41 @@ function Login() {
 
   return (
     <div className="login">
-      <Link to="/">
-        <img className="logoImg" src={logo} alt="img" />
-      </Link>
+        <Link to="/">
+          <img className="logoImg" src={logo} alt="img" />
+        </Link>
 
-      <div className="signInBox">
-        <h1>Sign-In</h1>
-        <form action="login">
-          <label htmlFor="numBox">Email or mobile phone number</label>
-          <input
-            className="login__input"
-            value={email}
-            type="text"
-            id="numBox"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <label htmlFor="numBox">Password</label>
-          <input
-            className="login__input"
-            value={pwd}
-            type="password"
-            id="numBox"
-            onChange={(e) => setPwd(e.target.value)}
-          />
-          <button onClick={logIn}>Continue</button>
-        </form>
-        <p>
-          By continuing, you agree to Fake Amazon's Conditions of Use and
-          Privacy Notice.
-        </p>
-      </div>
+        <div className="signInBox">
+          <h1>Sign-In</h1>
+          <form action="login">
+            <label htmlFor="numBox">Email or mobile phone number</label>
+            <input
+              className="login__input"
+              value={email}
+              type="text"
+              id="numBox"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <label htmlFor="numBox">Password</label>
+            <input
+              className="login__input"
+              value={pwd}
+              type="password"
+              id="numBox"
+              onChange={(e) => setPwd(e.target.value)}
+            />
+            <button onClick={logIn}>Continue</button>
+          </form>
+          <p>
+            By continuing, you agree to Fake Amazon's Conditions of Use and
+            Privacy Notice.
+          </p>
+        </div>
 
-      <span className="login__bottom"> New to Fake Amazon? </span>
-      <button className="login__newAccount" onClick={signUp}>
-        Create your Amazon account
-      </button>
+        <span className="login__bottom"> New to Fake Amazon? </span>
+        <button className="login__newAccount" onClick={signUp}>
+          Create your Amazon account
+        </button>
     </div>
   );
 }

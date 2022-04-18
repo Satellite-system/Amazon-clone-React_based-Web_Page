@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+.login{
+   background-color: white;
+}
 .logoImg{
    height: 40px;
    display: block;
@@ -66,4 +69,10 @@
    width: 25%;
    margin: 2px auto;
    padding: 7px;
+   border-radius: 5px;
+   background: linear-gradient(#ffff, #DCDFE4);
+}
+.login__newAccount:hover{
+   background: #DCDFE4;
+   cursor: pointer;
 }
