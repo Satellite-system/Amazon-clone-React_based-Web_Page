@@ -7,6 +7,8 @@ import {
  } from "react-router-dom";
 import { useStateValue } from '../Redux/Stateprovider';
 import { auth } from '../firebase';
+import Location from './Location';
+import LocationOnIcon from '@mui/icons-material/LocationOnOutlined';
 
 function Header() {
    const [{basket,user},dispatch] = useStateValue();
@@ -26,12 +28,20 @@ function Header() {
        <Link to='/' style={{textDecoration: 'none'}}>
        <img className='header_logo' src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="logo" />
        </Link>
+       <div className="header__nav">
+          <LocationOnIcon sx={{ color:'white'}} style={{alignItems:'center',margin:"5px 0px" }}/>
+          <div className="header__options" style={{marginLeft:"0px"}}>
+             <span className="option_lineOne">Deliver to </span>
+             
+             <span className="option_lineTwo">{user?user.email:'Select your address'}</span>
+          </div>
+          </div>
        <div className="header__search">
           {/* DropDown */}
           <input className='header__searchInput' type='text'/>
           <SearchIcon className='header__searchIcon' />
        </div>
-
+       <Location/>
        <div className="header__nav">
           <div className="header__options" onClick={handleAuth} >
              <span className="option_lineOne">Hello {user?'':'Guest'}</span>

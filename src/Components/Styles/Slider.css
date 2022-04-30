@@ -1,0 +1,13 @@
+.slider{
+   height: 40vh;
+   z-index: -1;
+}
+
+.slider__sec{
+    width: 70vh;
+   height: 100vh;
+   mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+   display: flex;
+   justify-content: center; 
+   align-items: center;
+}

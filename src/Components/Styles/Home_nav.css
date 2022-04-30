@@ -1,0 +1,32 @@
+.homeNav{
+   background-color: #232F3E;
+   height: 35px;
+   display: flex;
+   justify-content: space-evenly;
+   width: 100%;
+   color: white;
+   align-items: center;
+   text-align: center;
+   font-size: 14px;
+}
+.homeNav__options{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding: 2px 5px;
+   margin: 2px 2px;
+}
+.homeNav__options:hover{
+   cursor: pointer;
+   border: 2px solid white;
+   font-weight: 500;
+}
+.homeNav__menu{
+   align-items: center;
+   margin-top: 2px;
+   padding: 5px;
+}
+.ijkw__option1{
+   margin: 3px 0px;
+   padding: 2px 1px;
+}

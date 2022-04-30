@@ -1,0 +1,7 @@
+.location{
+   margin:0px 10px;
+   color: white;
+}
+.location__loader{
+   height: 2em;
+}

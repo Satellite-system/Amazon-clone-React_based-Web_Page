@@ -1,16 +1,20 @@
 import React from "react";
+import Home_Nav from "./Home_Nav";
 import Product from "./Product";
+import Slider from "./Slider";
 import "./Styles/Home.css";
 
 function Home() {
   return (
     <div className="home">
       <div className="home__container">
-        <img
+      <Home_Nav/>
+        {/* <img
           className="home__image"
           src="https://m.media-amazon.com/images/I/61pxhbXv8tL._SX3000_.jpg"
           alt="pager"
-        />
+        /> */}
+        <Slider className="home__image" />
 
         <div className="home__row">
           <Product

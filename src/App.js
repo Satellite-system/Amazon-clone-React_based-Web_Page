@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Checkout from './Components/Checkout';
 import Login from './Components/Login';
+import Slider from './Components/Slider'
 import {auth} from './firebase';
 import { useEffect } from 'react';
 import { useStateValue } from './Redux/Stateprovider';
@@ -45,6 +46,7 @@ function App() {
         <Route path='/' element={<><Header/> <Home /><Footer/></>}/>
         <Route path='login' element={<Login />} />
         <Route path='checkout' element={<><Header/><Checkout/><Footer/></>} />
+        <Route path='slider' element={<><Slider/><Footer/></>} />
       </Routes>
       
     </div>
