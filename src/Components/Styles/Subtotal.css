@@ -23,10 +23,14 @@
    background-color: #F7CA00;
    border: 1px solid;
    width: 100%;
-   height: 30px;
+   height: 35px;
    border-radius: 8px;
    padding: 3px 0px;
    color: #111;
    margin-top: 10px;
    border-color: #a88734 #9c7e31 #846a29;
+}
+.subtotal > button:hover{
+   cursor: pointer;
+   background-color: #ffd725;
 }

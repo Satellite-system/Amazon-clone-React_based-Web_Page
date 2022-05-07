@@ -13,6 +13,7 @@ import {auth} from './firebase';
 import { useEffect } from 'react';
 import { useStateValue } from './Redux/Stateprovider';
 import Footer from './Components/Footer';
+import Payment from './Components/Payment';
 
 function App() {
   const [{},dispatch] = useStateValue();
@@ -46,7 +47,7 @@ function App() {
         <Route path='/' element={<><Header/> <Home /><Footer/></>}/>
         <Route path='login' element={<Login />} />
         <Route path='checkout' element={<><Header/><Checkout/><Footer/></>} />
-        <Route path='slider' element={<><Slider/><Footer/></>} />
+        <Route path='payment' element={<><Header/><Payment/></>} />
       </Routes>
       
     </div>
