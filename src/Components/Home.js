@@ -1,10 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Home_Nav from "./Home_Nav";
 import Product from "./Product";
 import Slider from "./Slider";
 import "./Styles/Home.css";
 
 function Home() {
+
+  useEffect(() => {
+    document.title = "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon"
+  })
+  
+
   return (
     <div className="home">
       <div className="home__container">

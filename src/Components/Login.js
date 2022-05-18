@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../Recourses/amazon-2.svg";
 import "./Styles/Login.css";
@@ -13,6 +13,11 @@ function Login() {
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Amazon Sign In"
+  })
+  
 
   const logIn = (e) => {
     e.preventDefault();

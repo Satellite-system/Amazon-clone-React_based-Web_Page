@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{ useEffect } from 'react';
 import { useStateValue } from '../Redux/Stateprovider';
 import Basketitem from './Basketitem';
 import "./Styles/Checkout.css";
@@ -7,6 +7,11 @@ import Subtotal from "./Subtotal.js";
 
 function Checkout() {
   const [{basket}] = useStateValue();
+
+  useEffect(() => {
+    document.title = "Fake Shopping Cart"
+  })
+  
 
   return (
     <div className="checkout">

@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import { useStateValue } from "../Redux/Stateprovider";
 import "./Styles/Payment.css";
 import Basketitem from "./Basketitem";
+import { Navigate, useNavigate } from "react-router-dom";
+import Home from "./Home";
 
 const Payment = () => {
   const [{ basket, user }] = useStateValue();
+  const history = useNavigate();
+
+  useEffect(() => {
+    document.title = "Place Your Order";
+    if(basket.length==0){
+      history('/');
+    }
+  })
+  
+  const handleSubmit = ()=>{
+    
+  }
 
   return (
     <div className="payment">
@@ -49,6 +63,9 @@ const Payment = () => {
           </div>
           <div className="payment__details">
             {/* Stripe Maze dilayega yaha */}
+            <form onSubmit={handleSubmit}>
+
+            </form>
           </div>
         </div>
       </div>

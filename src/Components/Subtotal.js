@@ -8,6 +8,16 @@ import { useNavigate } from 'react-router-dom';
 function Subtotal() {
   const [{basket}] = useStateValue();
   const history = useNavigate();
+
+  const proceedBuy = ()=>{
+    if(basket.length==0){
+      console.log('Your Cart is Empty');
+      history('/');
+      // alert('Your Cart is empty'); 
+    }else{
+      history('/payment')
+    }
+  }
   
   return (
     <div className='subtotal'>
@@ -30,7 +40,7 @@ function Subtotal() {
       prefix = {'₹'}
       />
 
-      <button onClick={e=>history('/payment')}>Proceed to Buy</button>
+      <button onClick={proceedBuy}>Proceed to Buy</button>
     </div>
   )
 }
