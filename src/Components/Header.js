@@ -26,7 +26,7 @@ function Header() {
   return (
     <div className='header'>
        <Link to='/' style={{textDecoration: 'none'}}>
-       <img className='header_logo' src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="logo" />
+       <img className='header_logo' src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon" />
        </Link>
        <div className="header__nav">
           <LocationOnIcon sx={{ color:'white'}} style={{alignItems:'center',margin:"5px 0px" }}/>

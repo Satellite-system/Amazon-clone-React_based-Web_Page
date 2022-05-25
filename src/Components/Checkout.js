@@ -19,7 +19,7 @@ function Checkout() {
         <img
           className="checkout__ad"
           src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/OHL_HMT/FDFO/Untitled-21.jpg"
-          alt=""
+          alt="Ad Here............."
         />
 
         <div>

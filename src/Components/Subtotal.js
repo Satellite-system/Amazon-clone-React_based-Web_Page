@@ -10,7 +10,7 @@ function Subtotal() {
   const history = useNavigate();
 
   const proceedBuy = ()=>{
-    if(basket.length==0){
+    if(basket.length===0){
       console.log('Your Cart is Empty');
       history('/');
       // alert('Your Cart is empty'); 
