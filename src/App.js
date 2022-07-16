@@ -4,7 +4,7 @@ import Home from "./Components/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Checkout from "./Components/Checkout";
 import Login from "./Components/Login";
-import Slider from "./Components/Slider";
+import Order from "./Components/Order";
 import { auth } from "./firebase";
 import { useEffect } from "react";
 import { useStateValue } from "./Redux/Stateprovider";
@@ -54,6 +54,11 @@ function App() {
             }
           />
           <Route path="login" element={<Login />} />
+          <Route path="orders" element={
+            <>
+            <Header/>
+            <Order />
+          </>} />
           <Route
             path="checkout"
             element={

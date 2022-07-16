@@ -15,6 +15,7 @@
     "axios": "^0.27.2",
     "css-vendor": "^2.0.8",
     "firebase": "^9.6.10",
+    "path-browserify": "^1.0.1",
     "react": "^17.0.2",
     "react-country-flag": "^3.0.2",
     "react-currency-format": "^1.1.0",
@@ -22,14 +23,17 @@
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "react-simple-image-slider": "^2.4.1",
-    "stripe": "^9.4.0",
+    "run": "^1.4.0",
+    "start": "^5.1.0",
+    "stripe": "^9.9.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "dev": "nodemon index.js"
   },
   "eslintConfig": {
     "extends": [
@@ -48,5 +52,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "process": "^0.11.10",
+    "react-app-rewired": "^2.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0"
   }
 }
