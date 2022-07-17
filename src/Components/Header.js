@@ -48,7 +48,7 @@ function Header() {
              
              <span className="option_lineTwo">{user?user.email:'Sign In'}</span>
           </div>
-          <div className="header__options">
+          <div className="header__options" onClick={()=> navigate('/orders')}>
              <span className="option_lineOne">Returns</span>
              <span className="option_lineTwo">& Orders</span>
           </div>

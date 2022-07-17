@@ -8,7 +8,7 @@ import { getBasketTotal } from "../Redux/Reducer";
 import { CardElement, useStripe, useElements, Elements } from "@stripe/react-stripe-js";
 import axios from "axios";
 import { db } from "../firebase";
-import { doc, setDoc } from "firebase/firestore"; 
+import { doc, setDoc, addDoc, collection } from "firebase/firestore"; 
 
 const Payment = () => {
   const [{ basket, user },dispatch] = useStateValue();
@@ -19,6 +19,7 @@ const Payment = () => {
   const [disabled, setDisabled] = useState(true);
   const [error, setError] = useState(null);
   const [secreat, setSecreat] = useState('true')
+  const [paymentIntent, setPaymentIntent] = useState()
 
   const stripe = useStripe();
   const element = useElements();
@@ -28,13 +29,17 @@ const Payment = () => {
     ).then(response=>{
       const data = response.data.clientSecret.client_secret
       setSecreat(data);
+      setPaymentIntent(response.data.clientSecret)
       console.log(response.data.clientSecret)
     }).catch(err=> console.log((err)));  
   }
 
   useEffect(() => {
     document.title = "Place Your Order";
-    if(basket.length>0){
+    if(user==null){
+      history('/');
+    }
+    if(basket.length>0){    
       getClientSecret();
     }
   },[basket]);
@@ -52,9 +57,7 @@ const Payment = () => {
       // paymentIntent = payment confirmation
       console.log(' >>> ',secreat);
       console.log('<<<<<<< ',result)
-      // if(result.error){
-      //   console.log(result.error.message)
-      // }else{
+      saveToFirebase();
         
       setSucceeded(true);
       setProcessing(false);
@@ -71,16 +74,21 @@ const Payment = () => {
   };
 
   const saveToFirebase = async ()=>{
-    console.log(basket)
-    await setDoc(doc(db, "cities", "LA"), {
-      name: "Los Angeles",
-      state: "CA",
-      country: "USA"
-    }).then(() => {
-      console.log("Document successfully written!");
-    }).catch((error) => {
-        console.error("Error writing document: ", error);
+    // console.log(basket)
+    // console.log(user.uid);
+    const date = new Date();
+    const currentDate = `${date.getDate()<10?'0'+(date.getDate()):(date.getDate())}/${date.getMonth()+1<10?'0'+(date.getMonth()+1):date.getMonth()+1}/${date.getFullYear()}`;
+    const time = date.getTime();
+    
+
+    const ref = collection(db,'users',user?.uid,'orders');
+    // Add orders in collection "user"
+    basket.forEach(async order => {
+      order['date'] = currentDate ;
+      order['time'] = time;
+      await addDoc(ref, order);
     });
+
   }
 
   const handleChange = (event) => {
@@ -152,7 +160,6 @@ const Payment = () => {
               {/* If Error Present Only Then Show This */}
               {error && <div>{error}</div>}
             </form>
-              <button onClick={saveToFirebase}> Save it</button>
           </div>
         </div>
       </div>
