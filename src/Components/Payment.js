@@ -25,7 +25,7 @@ const Payment = () => {
   const element = useElements();
 
   const getClientSecret = async ()=>{
-    await axios.post(`http://localhost:5001/clone-f6b6a/us-central1/api/payment/create?total=${getBasketTotal(basket)*100 }`
+    await axios.post(`https://adarsh-amazon-clone-api.herokuapp.com/api/payment/create?total=${getBasketTotal(basket)*100 }`
     ).then(response=>{
       const data = response.data.clientSecret.client_secret
       setSecreat(data);
