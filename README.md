@@ -3,6 +3,8 @@
 **Visit At : https://amazon-clone-zakka.netlify.app **
 _(To See Working Web Version of Above Project )_
 
+![screenshot-amazon-clone-zakka netlify app-2022 07 22-13_02_40](https://user-images.githubusercontent.com/67074308/180388099-5373483f-4084-4696-81cc-73c4c49b8b47.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
