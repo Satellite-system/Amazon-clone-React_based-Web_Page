@@ -84,7 +84,7 @@ const Payment = () => {
     const ref = collection(db,'users',user?.uid,'orders');
     // Add orders in collection "user"
     basket.forEach(async order => {
-      order['date'] = currentDate ;
+      order['date'] = date.getTime() ;
       order['time'] = time;
       await addDoc(ref, order);
     });

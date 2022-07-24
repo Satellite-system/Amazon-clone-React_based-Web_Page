@@ -32,7 +32,7 @@ function Basketitem({id, title, image, price, rating}) {
 
           <div className="basketem__rating">
             {Array(rating).fill().map((_,i)=>(
-                        <p> <StarIcon sx={{ color: "#F49620" }} /> </p>
+              <p> <StarIcon sx={{ color: "#F49620" }} /> </p>
             ))}
           </div>
           <button onClick={removeFromBasket}>Remove from Basket</button>

@@ -10,6 +10,7 @@ function Checkout() {
 
   useEffect(() => {
     document.title = "Fake Shopping Cart"
+    window.scrollTo(0,0);
   })
   
 
