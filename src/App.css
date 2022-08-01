@@ -17,6 +17,10 @@
    width: 25%;
    padding: 1%;
 }
+.btn:hover{
+   cursor: pointer;
+   background: #FEBD69;
+}
 .signOutBx__title{
    font-weight: 600;
    font-size: larger;
