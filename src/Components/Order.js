@@ -21,26 +21,51 @@ const Order = () => {
       console.log("user: ",user.uid)
       // used Docs to get multiple data
       const orders = await getDocs(ref);
-      const tmp = [];
       console.log(orders)
-      orders.forEach((doc)=>{
-        tmp.push({id:doc.id,data:doc.data()});
+      
+      var tmpList = []
+      orders.forEach((element)=>{
+        tmpList.push({id:element.id,data:element.data()})
+        // console.log(element.data())
+        // setList(list=>[...list,...element.data()])
       })
+      setList(tmpList);
 
-      setList(tmp);
+      // setList(orders);
     }else{
       setList([]);
     }
   },[user])
 
-  // useEffect(() => {
-  //   console.log('Orders: ',list);
-  // }, [list])
+  useEffect(() => {
+    console.log('Orders: ',list);
+    // const tmp = [];
+    // list.forEach((element) => {
+    //   console.log('data: ',element);
+    // });
+  }, [list])
   
   return (
-    <div>
+    <div className='order'>
       <h1>Your Orders</h1>
-      {list.length>0 && <OrderItem order={list} /> }
+
+      <div >
+      {list.length>0 && list.map(item=>(
+        <OrderItem key={item.id} item={item} />
+        ))
+      }
+      </div>
+      {/* <OrderItem order={list} /> 
+       {list.length>0 && list.map(item => (
+         <Basketitem
+         key = {item.id}
+         id = {item.data.id}
+         title = {item.data.title}
+         image = {item.data.image}
+         price = {item.data.price}
+         rating = {item.data.rating}
+         />  
+      ))} */}
 
     </div>
   )

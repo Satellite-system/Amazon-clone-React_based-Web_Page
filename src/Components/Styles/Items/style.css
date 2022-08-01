@@ -1,0 +1,40 @@
+.basketem{
+   margin-top: 20px;
+   margin-bottom: 20px;
+   display: flex;
+}
+
+.basketem__info{
+   padding-left: 20px;
+}
+
+.basketem__info > button {
+   background: #f0c14b;
+   border: 1px solid;
+   margin-top: 10px;
+   border-color: #a88734 #9c7e31 #846a29;
+   color: #111;
+   padding: 6px;
+   border-radius: 4px;
+}
+.basketem__info > button:hover{
+   cursor: pointer;
+}
+
+.basketem__image{
+   object-fit: contain;
+   width: 180px;
+   height: 180px;
+}
+
+.basketem__rating{
+   display: flex;
+}
+
+.basketem__title{
+   font-size: 17px;
+   font-weight: 600;
+}
+
+
+

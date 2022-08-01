@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Styles/Header.css'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
@@ -9,15 +9,19 @@ import { useStateValue } from '../Redux/Stateprovider';
 import { auth } from '../firebase';
 import Location from './Location';
 import LocationOnIcon from '@mui/icons-material/LocationOnOutlined';
+import { render } from 'react-dom';
 
-function Header() {
+function Header(props) {
    const [{basket,user},dispatch] = useStateValue();
    const navigate = useNavigate();
-
+   const {open} = props;
    const handleAuth = ()=>{
       if(user){
-         alert('Do you Want to Sign Out??');
-         auth.signOut();
+         // alert('Do you Want to Sign Out??');
+         console.log('btn Pressedd')
+         open();
+
+         // auth.signOut();
       }else{
          navigate('/login');
       }

@@ -1,0 +1,28 @@
+.signOutBx{
+   z-index: 1000;
+   background: rgb(255, 247, 247);
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   padding: 4%;
+   border-radius: 4%;
+   
+}
+.btnView{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 5%;
+}
+.btn{
+   width: 25%;
+   padding: 1%;
+}
+.signOutBx__title{
+   font-weight: 600;
+   font-size: larger;
+   text-align: center;
+   margin-bottom: 1%;
+}
+.signOutBx__content{
+   padding: 0 5%;
+}
